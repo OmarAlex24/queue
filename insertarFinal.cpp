@@ -19,7 +19,7 @@ int main() {
     std::cout << "5.- Cola vacia?" << '\n';
     std::cout << "6.- Imprimir cola" << '\n';
     std::cout << "7.- Contar elementos de la cola" << '\n';
-    std::cout << "8.- Salir" << '\n';
+    std::cout << "15.- Salir" << '\n';
 
     std::cin >> opc;
 
@@ -63,8 +63,7 @@ int main() {
       std::cout << "Ingreso una opcion incorrecta";
       break;
     }
-
-  } while (opc != 8);
+  } while (opc != 15);
 
   return 0;
 }
