@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string.h>
 
 struct Nodo {
   int dato;
@@ -19,17 +18,17 @@ int colaVacia(Nodo *primero) {
 
   return primero == nullptr ? 1 : 0;
 }
+
 void insertartAlFinal(Nodo *&primero, Nodo *&ultimo, Nodo *n) {
   if (primero == nullptr) {
     primero = n;
     ultimo = n;
     return;
+    ultimo->siguiente = n;
+    ultimo = n;
+    return;
   }
-  ultimo->siguiente = n;
-  ultimo = n;
-  return;
 }
-
 void imprimirCola(Nodo *primero) {
   Nodo *aux = primero;
   if (colaVacia(primero))
